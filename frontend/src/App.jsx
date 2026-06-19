@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import AptitudeTest from './pages/AptitudeTest';
+import CodingPractice from './pages/CodingPractice';
 
 function ProtectedRoute({ children }) {
   const { user } = useAuth();
@@ -28,6 +29,14 @@ function AppRoutes() {
         element={
           <ProtectedRoute>
             <AptitudeTest />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/coding"
+        element={
+          <ProtectedRoute>
+            <CodingPractice />
           </ProtectedRoute>
         }
       />
