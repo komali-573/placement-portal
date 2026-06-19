@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const questionRoutes = require('./routes/questionRoutes');
 const problemRoutes = require('./routes/problemRoutes');
 const resumeRoutes = require('./routes/resumeRoutes');
+const interviewRoutes = require('./routes/interviewRoutes');
 
 // Load environment variables
 dotenv.config();
@@ -25,6 +26,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/questions', questionRoutes);
 app.use('/api/problems', problemRoutes);
 app.use('/api/resume', resumeRoutes);
+app.use('/api/interview', interviewRoutes);
 
 // Test route
 app.get('/', (req, res) => {
